@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comparador de textos</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/script.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Comparador de Textos por Similaridade</h1>
+    <a class="about-link" href="/sobre.html">Sobre</a>
+  </header>
+
+  <main>
+    <div class="tabs">
+      <button class="tab active" data-tab="pair">Dois Textos</button>
+      <button class="tab" data-tab="many">Vários Textos</button>
+    </div>
+
+    <div id="error" class="error hidden"></div>
+
+    <div class="card">
+      <strong>Opções:</strong>
+      <div class="row" style="margin-top:6px">
+        <label class="opt"><input type="checkbox" id="optStop" checked> Remover StopWords(Artigos, preposições e
+          etc)</label>
+        <label class="opt"><input type="checkbox" id="optStem" checked> Reduzir Palavras</label>
+        <label class="opt"><input type="checkbox" id="optAcc" checked> Ignorar Acentos</label>
+      </div>
+    </div>
+
+    <section id="tab-pair">
+      <div class="card">
+        <div class="grid2">
+          <div><label for="textA">Texto A</label><textarea id="textA" placeholder="Cole o primeiro texto…"></textarea>
+          </div>
+          <div><label for="textB">Texto B</label><textarea id="textB" placeholder="Cole o segundo texto…"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <button class="primary" id="btnPair">Comparar</button>
+          <button class="ghost" id="btnExample">Carregar exemplo</button>
+          <button class="ghost" id="btnClear">Limpar</button>
+        </div>
+      </div>
+
+      <div id="resultPair" class="hidden">
+        <div class="card">
+          <div class="score-wrap">
+            <div class="gauge" id="gauge">
+              <div><span><b id="scoreNum">0%</b><small>similaridade</small></span></div>
+            </div>
+            <div style="flex:1; min-width:260px">
+              <div class="verdict" id="verdict"></div>
+              <div id="metrics"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Termos mais relevantes em comum</h3>
+          <div class="chips" id="terms"></div>
+        </div>
+        <div class="card">
+          <h3>Trechos em comum</h3>
+          <div id="passages"></div>
+        </div>
+        <div class="card">
+          <h3>Estatísticas</h3>
+          <div id="stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tab-many" class="hidden">
+      <div class="card">
+        <div id="docs"></div>
+        <div class="row">
+          <button class="ghost" id="btnAddDoc">Adicionar texto</button>
+          <button class="primary" id="btnMany">Comparar todos</button>
+        </div>
+      </div>
+      <div id="resultMany" class="hidden">
+        <div class="card">
+          <h3>Matriz de similaridade</h3>
+          <div style="overflow-x:auto" id="matrix"></div>
+        </div>
+        <div class="card">
+          <h3>Ranking de pares mais similares</h3>
+          <div id="ranking"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

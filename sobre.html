@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sobre - Comparador de Textos</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Comparador de Textos por Similaridade</h1>
+  </header>
+
+  <main class="about-main">
+    <section class="about-intro">
+      <h2>Sobre o projeto</h2>
+      <p>Este site foi desenvolvido para projeto de final de curso, Engenharia de Software, pela Uninter. Um simples
+        comparador textual que auxilia na análise de semelhanças entre conteúdos escritos.permitindo comparar dois
+        textos ou analisar vários textos de uma vez, com barras e indicadores que facilitam a experiência do
+        usuário.
+      <p style="text-align: center; font-weight: bold;"><br>Nenhum dado será coletado aqui!</p>
+      </p>
+    </section>
+
+    <div class="about-grid">
+      <section class="about-card">
+        <h3>Como funciona?</h3>
+        <p>O site processa os textos e calcula diferentes medidas de similaridade. Comparando dois ou mais textos, os
+          resultados são combinados em uma pontuação geral. Na comparação múltipla, o usuário pode visualizar uma matriz
+          e um ranking dos pares mais semelhantes.</p>
+      </section>
+
+      <section class="about-card">
+        <h3>Métodos utilizados</h3>
+        <ul>
+          <li><strong>TF-IDF e Cosseno:</strong> Calcula a importância de uma palavra em um texto e usa similaridade
+            para comparação.</li>
+          <li><strong>Jaccard:</strong> Calcula a similaridade entre dois ou mais conjuntos de dados.</li>
+          <li><strong>Bigramas:</strong> Compara pares de palavras, considerando parte da ordem do texto.
+          </li>
+        </ul>
+      </section>
+
+      <section class="about-card">
+        <h3>Opções de análise</h3>
+        <p>Antes de comparar, o usuário pode escolher se deseja remover palavras comuns, reduzir em formas simplificadas
+          e ignorar diferenças de acentuação. Essas opções alteram a forma em que o texto é processado.
+        </p>
+      </section>
+
+      <section class="about-card">
+        <h3>Tecnologias</h3>
+        <p>O site foi desenvolvido de maneira tradicional, apenas com o auxilio do Python para auxiliar no processamento
+          e comparação textual</p>
+        <div class="about-tags">
+          <span class="about-tag">Python</span>
+          <span class="about-tag">HTML</span>
+          <span class="about-tag">CSS</span>
+          <span class="about-tag">JavaScript</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="about-note">
+      <strong>Importante:</strong> Apesar de uma pontuação alta indicar grande semelhança, não
+      comprova plágio nem determina a origem de um texto. Os resultados devem ser interpretados considerando o
+      contexto e uma análise humana.
+    </div>
+
+    <div class="about-actions">
+      <a href="/">← Voltar ao comparador</a>
+    </div>
+  </main>
+</body>
+
+</html>
